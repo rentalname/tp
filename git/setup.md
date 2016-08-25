@@ -1,4 +1,4 @@
-git/github
+git/github 環境構築
 ==
 
 環境の確認
