@@ -48,7 +48,10 @@ $ type wget
 
 ### セッティング
 ```
-$ rbenv init >> .bash_profile
+$ rbenv init
+#=> eval "$(rbenv init -)"
+
+$ echo 'eval "$(rbenv init -)"' >> .bash_profile
 ```
 
 ### rubyのインストール
