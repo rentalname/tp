@@ -6,3 +6,4 @@ source "https://rubygems.org"
 gem 'gollum'
 gem 'foreman'
 gem 'dotenv'
+gem 'cowsay'

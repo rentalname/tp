@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     charlock_holmes (0.7.3)
+    cowsay (0.3.0)
     diff-lcs (1.2.5)
     dotenv (2.1.1)
     foreman (0.82.0)
@@ -55,9 +56,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cowsay
   dotenv
   foreman
   gollum
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
