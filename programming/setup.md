@@ -12,10 +12,12 @@ macOS Sierraにアップグレードする
 
 ## 3. [homebrewのセットアップ]( https://blog.ymyzk.com/2015/10/os-x-el-capitan-homebrew/https://blog.ymyzk.com/2015/10/os-x-el-capitan-homebrew/)
 
-<!-- + `/usr/local`ディレクトリを作成する
+<!--
++ `/usr/local`ディレクトリを作成する
 ```sh
 $ sudo mkdir /usr/local && sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local
-``` -->
+```
+-->
 
 + `Xcode`のインストール
 + `Xcode`のライセンスに同意する
@@ -82,9 +84,9 @@ $ node -v #=> v6.7.0
 + [atom](https://atom.io/)
 + [iTerm2](https://www.iterm2.com/index.html)
 + [SourceTree](https://ja.atlassian.com/software/sourcetree)
-<!-- + [dash](https://itunes.apple.com/jp/app/dash-3-api-docs-snippets./id449589707?mt=12) -->
 
 ### atom
+
 #### コマンドラインツールのインストール
 + [Atom] -> [Install Shell Commands]
 + パッケージのインストール
