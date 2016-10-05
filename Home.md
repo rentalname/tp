@@ -7,6 +7,6 @@ Git
 
 プログラミング
 --
-+ [ドキュメント](programming/where_is_documents)
 + [開発環境構築](programming/setup)
++ [ドキュメント](programming/where_is_documents)
 + [Ruby](programming/ruby)
