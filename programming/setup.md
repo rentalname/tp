@@ -119,7 +119,8 @@ process.env.PATH = "#{process.env.HOME}/.rbenv/shims:#{process.env.HOME}/.rbenv/
 ```
 
 ## 8. Mission Controlを無効化する
-[システム環境設定] -> [Mission Control] -> [キーボードとマウスのショートカット]
++ 貴重なキーボードショートカットを占有しているので, 無効にします.
++ [システム環境設定] -> [Mission Control] -> [キーボードとマウスのショートカット]
 
 ## 9. SSH
 gitlab上のリポジトリを操作するためには, SSHによる認証が必要なので, SSHの初期設定をします.
