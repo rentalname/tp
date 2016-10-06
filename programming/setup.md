@@ -91,7 +91,7 @@ railsが依存するライブラリの中に, javascriptの実行環境を要求
 ```sh
 $ mkdir -p ~/.nodebrew/src
 
-$ nodebrew install latest
+$ nodebrew install-binary latest
 $ nodebrew use latest
 
 $ node -v #=> v6.7.0
