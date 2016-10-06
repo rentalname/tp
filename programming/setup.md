@@ -1,31 +1,25 @@
 開発環境構築
 ==
-開発を行うための標準的な開発環境を準備していきます
+開発を行うための標準的な開発環境を準備します
 
     所要時間: 60min(2,3を除く)
 
-## 1. Apple ID
-PCの初期設定を行い, Apple IDを取得して下さい
+準備
+--
++ Apple IDの取得
++ OSを最新にする
++ Xcodeのインストール
 
-## 2. upgrade to sierra
-macOS Sierraにアップグレードする
-
-## 3. [homebrewのセットアップ]( https://blog.ymyzk.com/2015/10/os-x-el-capitan-homebrew/https://blog.ymyzk.com/2015/10/os-x-el-capitan-homebrew/)
-
-<!--
-+ `/usr/local`ディレクトリを作成する
-```sh
-$ sudo mkdir /usr/local && sudo chflags norestricted /usr/local && sudo chown -R $(whoami):admin /usr/local
-```
--->
-
-+ `Xcode`のインストール
+[homebrew](http://brew.sh/)
+--
 + `Xcode`のライセンスに同意する
   + `$ xcode-select --install`
 + `homebrew`のインストール
   + http://brew.sh/
+  + homebrewのインストール方法は変更になることがあるので, 公式サイトの案内を参考にする
 
-## 4. 必要なパッケージのインストール
+開発によく使うパッケージのインストール
+--
 ```sh
 $ brew install curl direnv git imagemagick the_silver_searcher libxml2 libxslt mysql nodebrew openssl peco rbenv readline ruby-build sqlite tig wget
 ```
@@ -44,14 +38,26 @@ $ type tig
 $ type wget
 ```
 
-## 5. ruby
-
-### セッティング
+### ライブラリのリンク
+```sh
+$ brew link --force libxml2 libxslt
 ```
+
+ruby
+--
+
+### rbenv
+`rbenv`を利用することで, rubyのバージョンを指定して, rubyを実行することができる.
+プロジェクトによって, 利用するrubyバージョンに差異があるので, `rbenv`が利用できることは重要.
+
+```sh
 $ rbenv init
 #=> eval "$(rbenv init -)"
 
 $ echo 'eval "$(rbenv init -)"' >> .bash_profile
+
+# 一旦shellを再起動する
+exec -l $SHELL
 ```
 
 ### rubyのインストール
@@ -71,9 +77,17 @@ $ rbenv global 2.3.1
 $ ruby -v #=> 2.3.1
 ```
 
-## 6. node
+### gemのインストール時にドキュメントをインストールしないようにする
+```sh
+echo "gem: --no-document" > ~/.gemrc
+```
 
-### セッティング
+node
+--
+railsが依存するライブラリの中に, javascriptの実行環境を要求するものがあるので, nodeをjavascriptの実行環境として利用できるようにする
+
+### nodebrew
+`nodebrew`を利用することで, 最新のnodeを簡単に導入することができる
 ```sh
 $ mkdir ~/.nodebrew
 
@@ -83,13 +97,17 @@ $ nodebrew use latest
 $ node -v #=> v6.7.0
 ```
 
-## 7. 開発用アプリケーションの準備
+開発用アプリケーション
+--
+個人の嗜好によって, 好きなアプリケーションを使用することができる.
+説明のしやすさの都合で以下のアプリケーションをオススメします.
 
 + [atom](https://atom.io/)
 + [iTerm2](https://www.iterm2.com/index.html)
 + [SourceTree](https://ja.atlassian.com/software/sourcetree)
 
-### atom
+### [atom](https://atom.io/)
+コードエディタです
 
 #### コマンドラインツールのインストール
 + [Atom] -> [Install Shell Commands]
@@ -113,10 +131,17 @@ PACKAGE
 ```
 
 #### atom 環境でrbenvのrubyが使えるようにする
++ [Atom] -> [Init Script]
 ```coffee
 # init.coffee
 process.env.PATH = "#{process.env.HOME}/.rbenv/shims:#{process.env.HOME}/.rbenv/bin:#{process.env.PATH}"
 ```
+
+### [iTerm2](https://www.iterm2.com/index.html)
+ターミナルソフト. macに標準で備わっている[端末]と同等の機能を持っている.
+
+### [SourceTree](https://ja.atlassian.com/software/sourcetree)
+GUIで操作可能なgitクライアント
 
 ## 8. Mission Controlを無効化する
 + 貴重なキーボードショートカットを占有しているので, 無効にします.
