@@ -60,7 +60,8 @@ $ echo 'eval "$(rbenv init -)"' >> .bash_profile
 $ rbenv install -l
 
 # 最新のrubyをインストール(現時点)
-$ MAKE_OPTS=-j4 CONFIGURE_OPTS="--disable-install-rdoc --with-iconv-dir=/usr/lib" rbenv install 2.3.1
+
+$ MAKE_OPTS=-j4 CONFIGURE_OPTS="--disable-install-rdoc --with-readline-dir=$(brew --prefix readline) --with-iconv-dir=/usr/lib" rbenv install 2.3.1
 
 
 # インストールしたrubyをデフォルトで利用するようにする
