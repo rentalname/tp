@@ -32,7 +32,7 @@ $ type ag
 $ type mysql
 $ mysql --version
 $ type peco
-$ type sqlite
+$ type sqlite3
 $ sqlite3 --version
 $ type tig
 $ type wget
