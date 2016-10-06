@@ -89,7 +89,7 @@ railsが依存するライブラリの中に, javascriptの実行環境を要求
 ### nodebrew
 `nodebrew`を利用することで, 最新のnodeを簡単に導入することができる
 ```sh
-$ mkdir ~/.nodebrew
+$ mkdir -p ~/.nodebrew/src
 
 $ nodebrew install latest
 $ nodebrew use latest
