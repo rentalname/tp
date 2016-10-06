@@ -136,6 +136,8 @@ PACKAGE
 # init.coffee
 process.env.PATH = "#{process.env.HOME}/.rbenv/shims:#{process.env.HOME}/.rbenv/bin:#{process.env.PATH}"
 ```
++ atomを再起動する
+
 
 ### [iTerm2](https://www.iterm2.com/index.html)
 ターミナルソフト. macに標準で備わっている[端末]と同等の機能を持っている.
