@@ -153,3 +153,8 @@ Ch. 12 から 本文を読みつつ章末の練習問題を解く
 デバッグ
 --
 コーディング中に遭遇しやすいエラーメッセージについて確認する
+
+### ref.
++ http://qiita.com/scivola/items/3017068a354892b239f4
++ http://qiita.com/scivola/items/77017693de371ab49667
++ http://e-sahf.jp/class/13/error.htm
