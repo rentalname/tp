@@ -148,6 +148,8 @@ end
 + `#===`が呼び出される
 
 #### 後置if, 後置unless
++ 直感的には挙動がわかりにくくなる
++ 読んだときに違和感が表れることを利用して, ガード節を記述する際に利用すると効果的
 
 ### Ch. 6 繰り返し
 + 30分で目を通す
@@ -161,14 +163,58 @@ end
 + クラスメソッド
 + 関数的メソッド
 + 可変長引数
-+ キーワード引数
+```ruby
+def foo(*args)
+end
+
+foo(1, 2, 3, 4)
+```
 + デフォルト値
-+ `#[]`
-+ `#attr=`
+```ruby
+def foo(n=3)
+end
+
+foo(5)
+foo
+```
++ キーワード引数
+```ruby
+def foo(key1:, key2: false)
+end
+
+foo(key1: "hello")
+foo(key1; "bye", key2: true)
+```
 
 クラス・モジュール
 --
 
+#### すこし特殊なメソッド定義
++ `#attr=`
+```ruby
+class Person
+  def age=(n)
+    @age = n
+  end
+
+  def adult?
+    @age >= 20
+  end
+end
+
+ashina = Person.new
+ashina.age = 100
+ashina.adult?
+```
+
++ `#[]`
+```ruby
+class FizzBuzz
+  def self.[](n)
+    if n % 15
+  end
+end
+```
 ### Ch. 8 クラスとモジュール
 
 #### クラス
@@ -210,7 +256,6 @@ end
 + オブジェクト指向
   + 時間があったら読む
 
-
 標準クラス
 --
 Ch. 12 から 本文を読みつつ章末の練習問題を解く
@@ -219,6 +264,51 @@ Ch. 12 から 本文を読みつつ章末の練習問題を解く
 --
 コーディング中に遭遇しやすいエラーメッセージについて確認する
 
++ endが足りない
+```ruby
+if 0.zero?
+  puts 0
+else
+  puts "One"
+endo
+```
+
++ ハッシュリテラルの不備
+```ruby
+def foo
+  aaa: 100
+end
+```
+
++ ハッシュリテラルとブロックの混乱
+```ruby
+h = {a: 100}
+
+h.merge {b: 200}
+```
+
++  undefined method `+' for nil:NilClass (NoMethodError)
+```ruby
+h = {a: 100, b: 200}
+
+h["a"] + 100
+```
+
++ undefined local variable or method `number' for main:Object (NameError)
+```ruby
+numbers = [1, 3, 5, 7, 11]
+
+puts number
+```
+
++ dynamic constant assignment
+```ruby
+def init
+  STEP = 1
+end
+
+init
+```
 ### ref.
 + http://qiita.com/scivola/items/3017068a354892b239f4
 + http://qiita.com/scivola/items/77017693de371ab49667
