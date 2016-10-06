@@ -93,7 +93,7 @@ $ mkdir -p ~/.nodebrew/src
 
 $ nodebrew install-binary latest
 $ nodebrew use latest
-
+$ echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> .bash_profile
 $ node -v #=> v6.7.0
 ```
 
