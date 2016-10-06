@@ -78,9 +78,71 @@ $ pry
 + 15分で全体に目を通す
 
 #### Rubyでの真偽
+<table>
+  <tr>
+    <td>真</td>
+    <td>false以外の全て(true, 0, "false", "", [], ...)</td>
+  </tr>
+  <tr>
+    <td>偽</td>
+    <td>nil, false</td>
+  </tr>
+</table>
 
-#### unless
+#### if/unlessの使い分けについて
 + 条件節が肯定表現になるようにif/unlessを選ぶといいです
+```ruby
+# bad
+unless !condition
+  # do something
+end
+
+# good
+if condition
+  # do something
+end
+
+# bad
+if !condition
+  # do something
+end
+
+# good
+unless condition
+  # do something
+end
+```
+
++ else句を含む場合は, ifを使って書きましょう.
+```ruby
+# bad
+unless condition
+  # do something 1
+else
+  # do something 2
+end
+
+# good
+if condition
+  # do something 2
+else
+  # do something 1
+end
+```
+
++ condition部分を工夫することで, ifを使う形に書き直せる場合があります. ifを使う方が多くのプログラマにとって読みやすいです.
+```ruby
+n = -100
+# good
+unless n.negative?
+  # do something
+end
+
+# more than better
+if n.positive?
+  # do something
+end
+```
 
 #### case
 + `#===`が呼び出される
