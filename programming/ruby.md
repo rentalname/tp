@@ -146,6 +146,7 @@ end
 
 #### case
 + `#===`が呼び出される
++ <http://melborne.github.io/2013/02/25/i-wanna-say-something-about-rubys-case/>
 
 #### 後置if, 後置unless
 + 直感的には挙動がわかりにくくなる
