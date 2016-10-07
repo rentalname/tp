@@ -222,6 +222,34 @@ class FizzBuzz
 end
 ```
 
++ `#[]=`
+```ruby
+class Recipe
+  def initialize
+    @ingredients = {}
+  end
+
+  def []=(ingredient, amount)
+    @ingredients[material] = amount
+  end
+
+  def show
+    @ingredients.each do |ingredient, amount|
+      puts "#{material} ... #{amount}"
+    end
+  end
+end
+
+bread = Recipe.new
+
+bread[:小麦粉] = "400g"
+bread[:塩] = "5g"
+bread[:砂糖] = "12g"
+bread[:水] = "220g"
+
+bread.show
+```
+
 クラス・モジュール
 --
 
