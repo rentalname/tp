@@ -302,6 +302,7 @@ bread.show
 --
 Ch. 12 から 本文を読みつつ章末の練習問題を解く
 
+
 デバッグ
 --
 コーディング中に遭遇しやすいエラーメッセージについて確認する
@@ -353,7 +354,36 @@ end
 
 init
 ```
+
 ### ref.
 + http://qiita.com/scivola/items/3017068a354892b239f4
 + http://qiita.com/scivola/items/77017693de371ab49667
 + http://e-sahf.jp/class/13/error.htm
+
+### pry
+
+#### 使い方
+```ruby
+require 'pry'
+
+class Hello
+  def initialize(text)
+    @message = text
+  end
+
+  def greet
+    puts @message * 2
+  end
+end
+
+hello = Hello.new("Hello")
+
+binding.pry
+```
+
++ `$`
+  + メソッドの定義場所を確認する
++ `cd`
+  + コンテキストを指定したオブジェクトに取り替える
++ `ls`
+  + スコープ内のメソッドと変数を表示する
