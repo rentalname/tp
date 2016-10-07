@@ -188,7 +188,7 @@ def foo(key1:, key2: false)
 end
 
 foo(key1: "hello")
-foo(key1; "bye", key2: true)
+foo(key1: "bye", key2: true)
 ```
 
 #### すこし特殊なメソッド定義
@@ -317,6 +317,8 @@ endo
 
 + ハッシュリテラルの不備
 ```ruby
+[].push aaa: 100
+
 def foo
   aaa: 100
 end
