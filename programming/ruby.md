@@ -187,9 +187,6 @@ foo(key1: "hello")
 foo(key1; "bye", key2: true)
 ```
 
-クラス・モジュール
---
-
 #### すこし特殊なメソッド定義
 + `#attr=`
 ```ruby
@@ -224,6 +221,10 @@ class FizzBuzz
   end
 end
 ```
+
+クラス・モジュール
+--
+
 ### Ch. 8 クラスとモジュール
 
 #### クラス
