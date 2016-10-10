@@ -56,14 +56,10 @@ gitコマンドの補完/gitプロンプトの利用
 source $(brew --prefix git)/etc/bash_completion.d/git-completion.bash
 source $(brew --prefix git)/etc/bash_completion.d/git-prompt.sh
 
-
-source $HOME/.git-completion.bash
-source $HOME/.git-prompt.sh
-
 # プロンプトに各種情報を表示
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM=1
-GIT_PS1_SHOWUNTRACKEDFILES=
+GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWSTASHSTATE=1
 
 ############### ターミナルのコマンド受付状態の表示変更
