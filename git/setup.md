@@ -11,7 +11,7 @@ $ type git
 $ git --version
 
 # gitのアップグレード
-$ brew update && brew upgrade git
+$ brew upgrade git
 ```
 
 サポートツールの導入
