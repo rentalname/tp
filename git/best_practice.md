@@ -6,7 +6,7 @@ Git ベストプラクティス
 ref. <http://postd.cc/how-to-write-a-git-commit-message/>
 
 ### 基本スタイル
-```git
+```
 1行目: 変更の概要(50字くらい)
 2行目: 空行
 3行目: 変更の詳細(必要であれば)
