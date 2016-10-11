@@ -165,6 +165,7 @@ TIPS
   + direnvのインストールと設定
   ```sh
     $ brew install direnv
+    $ echo 'eval "$(direnv hook bash)"' >> ~/.bash_profile
     $ echo 'PATH=$(pwd)/bin:$PATH' > .envrc
     $ direnv allow
   ```
