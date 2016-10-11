@@ -162,7 +162,7 @@ TIPS
 
 
 + bundle exec / bin/rails の省略
-  + direnvのインストールと設定<http://direnv.net/>
+  + [direnv](http://direnv.net/)のインストールと設定
   ```sh
     $ brew install direnv
     $ echo 'eval "$(direnv hook bash)"' >> .bash_profile
