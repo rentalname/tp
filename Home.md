@@ -12,3 +12,7 @@ Git
 + [ドキュメント](programming/where_is_documents)
 + [Ruby](programming/ruby)
 + [Rails](programming/ruby_on_rails)
++ [Slim](programming/slim_template)
++ [SASS](programming/sass)
++ [jQuery](programming/jquery)
++ [Rails環境でのデバッグ](programming/debug_with_rails)
