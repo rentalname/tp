@@ -30,8 +30,13 @@ log
 + `+F`
   + ファイルに追記があった時に逐次読み込む
 
-rails.logger
+Rails.logger
 --
+```ruby
+Rails.logger.error("error")
+Rails.logger.info("info")
+```
+
 
 javascript
 --
