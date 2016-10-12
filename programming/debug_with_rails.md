@@ -8,7 +8,13 @@ better_errors
 + Gemfileに`gem "better_errors"`を追加
 + Gemfileに`gem "binding_of_caller"`を追加
 
-### 使い方
+### 機能
+`rails s`でサーバーが起動している際に, アプリケーション側で例外が発生した時, 例外を発生したコードのコンテキストでデバッガーを利用できるようになる.
+デバッグ操作はブラウザ上で実行できる.
+
+### Tips
+`better_errors`が提供するデバッグ画面は, `pry`に比べて操作性に劣る.
+better_errorsのデバッグ画面で, `binding.pry`を実行することで, `pry`を使ってターミナル上でデバッグを続けることができる.
 
 pry-rails
 --
