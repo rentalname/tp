@@ -18,6 +18,24 @@ ref. <http://alphasis.info/jquery-api/>
 + `#ready`
   + DOMの準備ができた時に実行する処理を登録する
 
+### sample
+```html
+<button class="add">ADD</button>
+<input type="number" class="count">
+```
+```javascript
+$(function(){
+  $(".add").on("click", function(){
+    alert("click");
+  });
+
+  $(".count").on("change", function(e){
+    var count = $(e.target).val()
+    console.log(count)
+  })
+})
+```
+
 ### イベントの種類
 + click
   + 要素がクリックされた
