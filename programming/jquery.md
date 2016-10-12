@@ -5,7 +5,7 @@ ref. <http://alphasis.info/jquery-api/>
 
 セレクター
 --
-+ `$(SELECTOR)`
++ $(SELECTOR)
 + $('#id')
 + $('.class')
 + $('tag')
