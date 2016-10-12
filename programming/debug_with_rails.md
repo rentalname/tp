@@ -18,3 +18,20 @@ log
 ### lessを使ったログファイルの監視
 + `-R`
 + `+F`
+
+rails.logger
+--
+
+javascript
+--
++ デベロッパーツール
++ log
++ debugger
+
+html
+--
++ デベロッパーツール
+
+css
+--
++ デベロッパーツール
