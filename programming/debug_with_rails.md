@@ -5,7 +5,7 @@ better_errors
 --
 
 ### 導入
-+ Gemfileに`gem "better_error"`を追加
++ Gemfileに`gem "better_errors"`を追加
 + Gemfileに`gem "binding_of_caller"`を追加
 
 ### 使い方
