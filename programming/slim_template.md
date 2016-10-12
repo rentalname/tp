@@ -69,7 +69,7 @@ a href="#"
 ```
 
 ```slim
-[:foo, :bar, :baz].each do |sym|
+- [:foo, :bar, :baz].each do |sym|
   p
     = sym
 ```
