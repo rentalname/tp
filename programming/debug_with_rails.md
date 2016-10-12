@@ -3,6 +3,7 @@ rails環境でのデバッグ
 
 better_errors
 --
+
 ### 導入
 + Gemfileに`gem "better_error"`を追加
 + Gemfileに`gem "binding_of_caller"`を追加
