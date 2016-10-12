@@ -12,10 +12,12 @@ better_errors
 
 pry-rails
 --
+
 ### [State navigation](https://github.com/pry/pry/wiki/State-navigation)
 
 log
 --
+
 ### lessを使ったログファイルの監視
 + `-R`
 + `+F`
