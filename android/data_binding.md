@@ -1,6 +1,11 @@
 Data Binding
 ==
 
++ https://developer.android.com/topic/libraries/data-binding/index.html
++ https://bintray.com/android/android-tools/com.android.databinding.compiler
++ https://bintray.com/android/android-tools/com.android.databinding.dataBinder
++ https://bintray.com/android/android-tools/com.android.databinding.compilerCommon
+
 基礎情報
 --
 + https://github.com/takuji31/KotlinDataBinding/blob/master/app/build.gradle
