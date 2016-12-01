@@ -1,6 +1,9 @@
 Postgresql環境構築
 ==
 
+### 前提
++ homebrewの設定が完了していること
+
 インストール
 --
 ### homebrewを使う場合
@@ -44,7 +47,7 @@ $ createuser <user_name>
 
 #### superuser をつくる
 ```sh
-$ createuser <user_name>
+$ createuser -s <user_name>
 ```
 
 ### 追加されたユーザーを確認する
