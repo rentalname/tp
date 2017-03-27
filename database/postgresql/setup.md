@@ -38,6 +38,16 @@ $ brew services start postgresql
 ```sh
 $ psql -l
 ```
+
+#### うまくいかないとき
+以下のようなエラーメッセージが表示される場合は, `/usr/local/var/postgres`を削除し, `brew reinstall postgresql`を実行することで解決することがある
+
+```
+psql: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+```
+
 ユーザー
 --
 ### ユーザーの追加
@@ -112,4 +122,3 @@ $ brew cask install pg-commander
 --
 + [MacのRailsアプリでPostgreSQLを使う方法](http://qiita.com/yh2020/items/8be3087004d100fe752b)
 + [PostgreSQLの管理系コマンドまとめ](http://qiita.com/gigamori/items/7522929e0d4b1fb4e5bf)
-
