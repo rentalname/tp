@@ -133,6 +133,71 @@ index 1c1a37c..22a7757 100644
 
 編集が完了したら`bundle install`を再実行する
 
+Procfileの設定
+--
+Procfileをアプリケーションディレクトリの直下に作成(`$ touch Procfile`)し, 以下の内容を記載する
+
+```Procfile
+web: rails server
+```
+
+また, ローカル環境でも, 同じように実行できるようにするために, `foreman` gemをGemfileに追加し, `bundle install`を再度実行する
+
+```patch
+diff --git Gemfile Gemfile
+index b86ceba..8ea37cb 100644
+--- Gemfile
++++ Gemfile
+@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
+
+ # Use Capistrano for deployment
+ # gem 'capistrano-rails', group: :development
++gem 'foreman'
+
+ group :development, :test do
+   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+diff --git Procfile Procfile
+new file mode 100644
+index 0000000..82b59f5
+--- /dev/null
++++ Procfile
+@@ -0,0 +1 @@
++web: rails server
+
+```
+
+アプリケーションのデプロイ
+--
+### herokuにコードをアップロードする
+
+```sh
+$ cd APP_DIR
+
+$ git remote -v # heroku上のリポジトリが登録されていることを確認する
+
+$ git commit -am 'これまでの作業内容をローカルのgitリポジトリにコミットする'
+
+$ git push heroku master
+```
+
+### heroku環境上でのマイグレーションの実行
+
+```sh
+$ cd APP_DIR
+
+$ heroku run RAILS_ENV=production rails db:migrate
+```
+
+### サービスの起動
+```sh
+$ cd APP_DIR
+
+$ heroku run web
+```
+
+### デプロイされたことを確認
+
+
 参考資料
 --
 http://morizyun.github.io/blog/beginner-rails-heroku-tutorial/
