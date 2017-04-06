@@ -8,6 +8,7 @@ Herokuアカウントの取得
 
 Heroku CLI
 --
+
 ### 導入
 + `$ brew install heroku`
 
@@ -33,6 +34,7 @@ $ bundle exec rails new .
 
 git
 --
+
 ### gibo
 後述する`.gitignore`ファイルを作成するために`gibo`と呼ばれるパッケージをインストールする
 
