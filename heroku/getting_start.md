@@ -12,8 +12,6 @@ Heroku CLI
 + `$ brew install heroku`
 
 ### 認証
-+ `$ heroku`
-  + `Unauthorized`の出力
 + `$ heroku login`
   + Herokuアカウントの取得に利用したメールアドレスとパスワードを入力する
 
@@ -68,10 +66,14 @@ $ git commit -m "init"
 ```sh
 $ cd APP_DIR
 
-$ heroku create
+$ heroku create [YOUR_APP]
 
 $ git remote -v
 ```
+
+Postgresql のインストール
+--
+[Postgresql環境構築](/database/postgresql/setup)を参照
 
 Heroku Postgres アドオンの有効化
 --
@@ -185,10 +187,11 @@ $ git push heroku master
 ```sh
 $ cd APP_DIR
 
-$ heroku run RAILS_ENV=production rails db:migrate
+$ heroku run rails db:migrate
 ```
 
 ### サービスの起動
+
 ```sh
 $ cd APP_DIR
 
@@ -197,6 +200,8 @@ $ heroku run web
 
 ### デプロイされたことを確認
 
+### これ以降の開発手順
+これ以降は, (コードの変更→ローカルリポジトリへのコミット→herokuリポジトリへのプッシュ)を繰り返すことでアプリケーションの更新とデプロイが可能になる
 
 参考資料
 --
